@@ -6,14 +6,13 @@ var PORT = process.env.PORT || 5000;
 var date = require('./mymod.js');
 var app = express();
 
-app.use(express.static(__dirname));
-
+//app.use(express.static(path.join(__dirname, 'public')));
 //route
 
 app.get("/",function(req,res){
-  res.render('index.html');
-  res.writeHead(200,{'Content-Type':'text/html'});
-  res.end('todays date')
+  res.writeHead(200, {'Content-Type': 'text/html'});
+  res.write("The date and time are currently: " + date.getdate());
+  res.end();
 });
 
 /*  app.use(express.static(path.join(__dirname, 'public')))

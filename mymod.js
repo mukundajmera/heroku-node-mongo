@@ -1,4 +1,4 @@
 
-exports.show_date = function(){
+exports.getdate = function(){
   return Date();
 };
