@@ -1,32 +1,18 @@
 {
-  "name": "mongo-prac",
-  "version": "1.0.0",
-  "description": "basic practice app for mongo connectivity",
-  "main": "home.js",
+  "name": "tutorial-practice",
+  "version": "0.0.1",
+  "description": "this is basic tutorial practice",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mukundajmera/heroku-node-mongo.git"
-  },
   "author": "Mukund Ajmera",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mukundajmera/heroku-node-mongo/issues"
-  },
-  "homepage": "https://github.com/mukundajmera/heroku-node-mongo#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
-    "cookie-parser": "^1.4.3",
-    "debug": "^3.1.0",
+    "ejs": "^2.5.7",
     "express": "^4.16.2",
-    "jade": "^1.11.0",
-    "kerberos": "0.0.23",
-    "mongodb": "^3.0.2",
-    "morgan": "^1.9.0",
-    "pug": "^2.0.0-rc.4",
-    "python": "0.0.4",
-    "serve-favicon": "^2.4.5"
+    "get-package-json-from-github": "^1.2.1",
+    "mongodb": "^3.0.2"
   }
 }
