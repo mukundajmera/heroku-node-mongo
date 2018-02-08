@@ -5,7 +5,7 @@ var routes = require('./routes/route.js')
 //parsing json need this library
 var bodyParser = require('body-parser');
 //port is for binding it
-var port = process.env.PORT ||80;
+var port = process.env.PORT || 80;
 
 var app = express();
 //setting template to views as ejs
@@ -22,7 +22,7 @@ app.get('/',routes.login);
 //admin domain
 app.get('/admin',routes.login_admin);
 
-//direct linking fror view page
+//direct linking fro view page
 app.get('/view',routes.view);
 
 

@@ -1,10 +1,10 @@
+var mongo;
 //mongo db connectivity
 	//including mongodb as the package for the process
 	var mongodb = require('mongodb').MongoClient;
-	var mongo;
-	//connecting to the db if not throwing error
 	var URL = process.env.MONGODB_URI || 'mongodb://localhost:27017/app';
-	mongodb.connect(,function(error,db) {
+	mongodb.connect(URL,function(error,db) {
+	//connecting to the db if not throwing error
 		if(error)
 		{
 			console.log('cannot connect');
@@ -12,6 +12,8 @@
 		else
 		{
 			mongo = db.db('app');
+			console.log('connected to DB');
+			
 		}
 	});
 
@@ -47,6 +49,7 @@ exports.insert_comments = function (req,res) {
 		else
 		{
 			console.log("success");
+			res.redirect('/view');
 		}
 		});
 }
